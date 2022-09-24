@@ -1,0 +1,35 @@
+<!-- From bootstrap design -->
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jovian Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+        <img class="img-fluid" id="banner" src="https://jovian-careers-website.nodpod.repl.co/static/olivie-strauss-lWTzYAsGROk-unsplash.jpg" height="320">
+        <h2 class="text-center mt-2">About Jovian</h2>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vivamus arcu felis bibendum ut. Non nisi est sit amet facilisis magna. Fermentum leo vel orci porta non pulvinar neque laoreet. Accumsan tortor posuere ac ut. Sodales ut eu sem integer vitae. Sodales neque sodales ut etiam sit. Mauris cursus mattis molestie a iaculis. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Condimentum lacinia quis vel eros donec ac. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Est ultricies integer quis auctor elit. Aenean pharetra magna ac placerat vestibulum. In nibh mauris cursus mattis. Aliquam faucibus purus in massa tempor nec. Donec et odio pellentesque diam volutpat commodo sed egestas. Maecenas accumsan lacus vel facilisis volutpat est velit egestas dui. Mauris augue neque gravida in fermentum et sollicitudin. Sollicitudin tempor id eu nisl nunc.</p>
+        <h2 class="text-center mt-2">Open Positions</h2>
+         <div>
+            {% for job in jobs %}
+              {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn -lg">Contact Us</button>
+        <p class="mt-4">Copyright 2022 Jovian</p>
+      </div>
+      </div>
+  </body>
+</html>

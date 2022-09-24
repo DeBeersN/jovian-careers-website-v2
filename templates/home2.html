@@ -1,0 +1,62 @@
+<!-- From scratch design -->
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Jovian Careers</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(100, 100, 100);
+        text-align: center;
+      }
+
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: normal;
+        color: rgb(100, 100, 100);
+        text-align: center;
+      }
+
+      .bodytext {
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(80, 80, 80);
+      }
+
+      #container {
+        font-family: Roboto;
+        max-width: 720px;
+        margin: 0 auto 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <h1>{{title}} Careers</h1>
+        <img id="banner" src="https://jovian-careers-website.nodpod.repl.co/static/olivie-strauss-lWTzYAsGROk-unsplash.jpg" height="320">
+        <h2>About Jovian</h2>
+        <p class="bodytext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vivamus arcu felis bibendum ut. Non nisi est sit amet facilisis magna. Fermentum leo vel orci porta non pulvinar neque laoreet. Accumsan tortor posuere ac ut. Sodales ut eu sem integer vitae. Sodales neque sodales ut etiam sit. Mauris cursus mattis molestie a iaculis. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Condimentum lacinia quis vel eros donec ac. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Est ultricies integer quis auctor elit. Aenean pharetra magna ac placerat vestibulum. In nibh mauris cursus mattis. Aliquam faucibus purus in massa tempor nec. Donec et odio pellentesque diam volutpat commodo sed egestas. Maecenas accumsan lacus vel facilisis volutpat est velit egestas dui. Mauris augue neque gravida in fermentum et sollicitudin. Sollicitudin tempor id eu nisl nunc.</p>
+        <h2 class='text-center mt-2 mt-4'>Open Positions</h2>
+        <div>
+          {% for job in jobs %}
+            <h4>{{job['title']}}</h4>
+          <div>{{job['location']}}</div>
+          {% endfor %}
+        </div>
+      <div style="text-align:center;">
+        <button>Contact Us</button>
+        <p>Copyright 2022 Jovian</p>
+      </div>
+      </div>
+  </body>
+</html>
